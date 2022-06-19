@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import DateInput from './components/DateInput';
+import CountDown from './components/CountDown';
+import { TimerProvider } from './contexts/timerContext';
+import Icon, { IconName } from './Icon';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TimerProvider>
+      <main className="timer-container">
+        <section className='timer'>
+          <div><Icon name={IconName.TimerIcon} size={50} fillColor="none" /></div>
+          <DateInput />
+          <CountDown />
+        </section>
+      </main>
+    </TimerProvider>
   );
 }
 

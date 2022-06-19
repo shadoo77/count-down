@@ -1,0 +1,131 @@
+@import './styles/application.scss';
+
+.timer-container {
+  background-image: url('https://images.unsplash.com/photo-1578923931302-7fd9b3495be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+
+  .timer {
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $regular-spacing;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+
+    .input-area {
+      width: 16rem;
+
+      @include smmax {
+        width: 100%;
+      }
+
+      .text-input {
+        border: 2px solid $theme-secondary;
+        background-color: #fff;
+        display: flex;
+        padding: $regular-spacing;
+        justify-content: center;
+        align-items: center;
+
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          font-size: 16px;
+        }
+      }
+
+      &-note {
+        font-size: 14px;
+        color: $normal-grey;
+        margin: $regular-spacing 0;
+      }
+    }
+
+    .count-down {
+      width: 27rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: $small-spacing;
+      margin: $large-spacing $small-spacing;
+      padding: ($large-spacing * 2) $large-spacing;
+      border: 1px solid #fff;
+
+      @include smmax {
+        width: 100%;
+      }
+
+      & div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $theme-secondary;
+        padding: $large-spacing $regular-spacing;
+        border-radius: $small-spacing;
+
+        & span:first-child {
+          font-weight: 800;
+          font-size: 20px;
+        }
+
+        & span:last-child {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .expired-notice {
+      margin-top: $large-spacing;
+      padding: $large-spacing * 2;
+      border: 1px solid #fff;
+      width: 27rem;
+      color: red;
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: ($small-spacing * 2) $large-spacing;
+    margin-top: 1rem;
+    font-weight: 700;
+    transition-duration: 0.4s;
+    width: 100%;
+
+    &--primary {
+      color: #fff;
+      background-color: #000;
+      border: 1px solid #fff;
+
+      &:hover {
+        background-color: $theme-color;
+      }
+    }
+
+    &--secondary {
+      color: #000;
+      background-color: #fff;
+      border: 2px solid #000;
+
+      &:hover {
+        background-color: $light-grey;
+        color: $theme-color;
+      }
+    }
+
+    &--disabled {
+      background-color: $normal-grey;
+      cursor: not-allowed;
+    }
+  }
+}

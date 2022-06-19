@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<section
+  className="count-down"
+  data-testid="count-down"
+>
+  <div>
+    <span>
+      00
+    </span>
+    <span>
+      <small>
+        days
+      </small>
+    </span>
+  </div>
+  <div>
+    <span>
+      00
+    </span>
+    <span>
+      <small>
+        hours
+      </small>
+    </span>
+  </div>
+  <div>
+    <span>
+      00
+    </span>
+    <span>
+      <small>
+        minutes
+      </small>
+    </span>
+  </div>
+  <div>
+    <span>
+      00
+    </span>
+    <span>
+      <small>
+        seconds
+      </small>
+    </span>
+  </div>
+</section>
+`;

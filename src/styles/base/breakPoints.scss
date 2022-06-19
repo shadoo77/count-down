@@ -1,0 +1,58 @@
+@mixin xxs {
+    @media (max-width: $size-xxs) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: $size-xs) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: ($size-xs + 1)) {
+        @content;
+    }
+}
+
+@mixin smmax {
+    @media (max-width: ($size-md - 1)) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: $size-md) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: $size-lg) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: $size-xl) {
+        @content;
+    }
+}
+
+@mixin max-width {
+    @media (max-width: ($max-width - 1)) {
+        @content;
+    }
+}
+
+@mixin retina() {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+        @content;
+    }
+}
